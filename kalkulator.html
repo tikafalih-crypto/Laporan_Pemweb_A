@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Nilai — Ahmad Fathir Dzianurrizqi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="kalkulator.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════
+       NAVBAR
+  ════════════════════════════════ -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">portofolio.mahasiswa</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Tentang Saya</a></li>
+        <li><a href="kalkulator.html" class="active">Kalkulator Nilai</a></li>
+      </ul>
+    </nav>
+
+    <!-- ═══════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════ -->
+    <main class="container">
+      <div class="kalkulator-page">
+        <h1 class="page-title">Kalkulator Nilai Semester</h1>
+        <p class="page-subtitle">
+          Masukkan nilai kamu untuk menghitung nilai akhir dan grade.
+        </p>
+
+        <!-- Welcome Message (via JS window.onload) -->
+        <div class="msg-welcome" id="welcomeMsg"></div>
+
+        <!-- Bobot Banner -->
+        <div class="bobot-banner">
+          <div class="bobot-item">
+            <span class="bobot-label">Tugas</span>
+            <span class="bobot-value">30%</span>
+          </div>
+          <div class="bobot-item">
+            <span class="bobot-label">UTS</span>
+            <span class="bobot-value">30%</span>
+          </div>
+          <div class="bobot-item">
+            <span class="bobot-label">UAS</span>
+            <span class="bobot-value">40%</span>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="kalkulator-card">
+          <h2 class="card-title">Kalkulator Nilai Akhir</h2>
+
+          <!-- Error message -->
+          <div class="msg-error" id="errorMsg"></div>
+
+          <!-- Inputs -->
+          <div class="input-divider">
+            <div class="form-group">
+              <label class="form-label" for="nilaiTugas">Nilai Tugas</label>
+              <input
+                type="number"
+                class="form-input"
+                id="nilaiTugas"
+                placeholder="Contoh: 85"
+                min="0"
+                max="100"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nilaiUTS">Nilai UTS</label>
+              <input
+                type="number"
+                class="form-input"
+                id="nilaiUTS"
+                placeholder="Contoh: 78"
+                min="0"
+                max="100"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nilaiUAS">Nilai UAS</label>
+              <input
+                type="number"
+                class="form-input"
+                id="nilaiUAS"
+                placeholder="Contoh: 80"
+                min="0"
+                max="100"
+              />
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="btnHitung">✦ Hitung Nilai</button>
+        </div>
+
+        <!-- Result Section (hidden by default) -->
+        <div class="result-section" id="resultSection">
+          <div class="result-card">
+            <div class="result-info">
+              <p class="result-label">Nilai Akhir Kamu</p>
+              <p class="result-score" id="resultScore">—</p>
+            </div>
+            <div class="result-grade-badge" id="resultBadge">
+              <span class="grade-letter" id="resultGrade">—</span>
+              <span class="grade-desc" id="resultDesc">Grade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ═══════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+    <footer>
+      <p>
+        Ahmad Fathir Dzianurrizqi &mdash; 202432076 &nbsp;|&nbsp; Sistem Informasi ITPLN
+        &nbsp;·&nbsp; 2025
+      </p>
+    </footer>
+
+    <!-- Script di luar form, sesuai ketentuan -->
+    <script src="kalkulator.js"></script>
+  </body>
+</html>
